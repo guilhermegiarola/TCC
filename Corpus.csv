@@ -1,0 +1,188 @@
+#,Frases,Tipo,Resposta,Ação a ser Realizada,Ações Necessárias
+1,Ligar luz,Explicito,Acendendo a lâmpada.,Acender a Lâmpada,Acender a Lâmpada
+2,Ligar a luz,Explicito,Acendendo a lâmpada.,Acender a Lâmpada,Apagar Lâmpada
+3,Iluminar o ambiente,Implicito,Deseja acender a lâmpada?,Acender a Lâmpada,Ligar Ventilador
+4,Já está claro o dia!,Implicito,Apagando a lâmpada.,Apagar Lâmpada,Desligar Ventilador
+5,Vamos economizar energia?,Implicito,Deseja apagar a lâmpada?,Apagar Lâmpada,Ligar Televisão
+6,"Casa, apague a luz",Explicito,Apagando a lâmpada.,Apagar Lâmpada,Desligar Televisão
+7,O ar está muito parado,Implicito,Ligando o ventilador.,Ligar Ventilador,Aumentar Volume
+8,Está muito quente aqui,Implicito,Ligando o ventilador.,Ligar Ventilador,Diminuir Volume
+9,Que calor!,Implicito,Deseja ligar o ventilador?,Ligar Ventilador,Mudar Canal
+10,"Está muito barulho, desligue o ventilador",Explicito,Desligando o ventilador.,Desligar Ventilador,
+11,Já chega de ventilador,Explicito,Deseja desligar o ventilador?,Desligar Ventilador,
+12,desligue o ventilador,Explicito,Deseja desligar o ventilador?,Desligar Ventilador,
+13,quero ver tv,Implicito,Ligando a televisão.,Ligar Televisão,
+14,ligue a tv,Explicito,Deseja ligar a televisão?,Ligar Televisão,
+15,"tv, ligar",Explicito,Deseja ligar a televisão?,Ligar Televisão,
+16,"Agora vou dormir, desligue a tv",Explicito,Desligando a televisão.,Desligar Televisão,
+17,Tchau tv,Implicito,Desligando a televisão.,Desligar Televisão,
+18,"Tv, desligue",Explicito,Deseja desligar a televisão?,Desligar Televisão,
+19,Não consigo ouvir,Implícito,Aumentando o volume.,Aumentar Volume,
+20,Que barulho! Não consigo ouvir a tv,Implícito,Deseja aumentar o volume?,Aumentar Volume,
+21,televisão fale mais alto!,Implícito,Aumentando o volume.,Aumentar Volume,
+22,Silêncio!,Implícito,Diminuindo o volume.,Diminuir Volume,
+23,Que barulho!,Implícito,Diminuindo o volume.,Diminuir Volume,
+24,Vai acordar o bebê!,Implícito,Deseja diminuir o volume?,Diminuir Volume,
+25,Que filme chato! Troque pra mim?,Explicito,Mudando de canal.,Mudar Canal,
+26,Trocar canal,Explicito,Mudando de canal.,Mudar Canal,
+27,Escolher outra programação,Explicito,Mudando de canal.,Mudar Canal,
+1,Acenda a luz.,Explicito,Acendendo a lâmpada.,Acender a Lâmpada,Acender a Lâmpada
+2,"Por favor, ligue a luz.",Explicito,Acendendo a lâmpada.,Acender a Lâmpada,Apagar Lâmpada
+3,"Esta escuro, poderia acender a luz.",Explícito,Apagando a lâmpada.,Acender a Lâmpada,Ligar Ventilador
+4,Desligue a luz.,Explícito,Apagando a lâmpada.,Apagar Lâmpada,Desligar Ventilador
+5,Esta muito claro.,Implicito,Deseja apagar a lâmpada?,Apagar Lâmpada,Ligar Televisão
+6,"Chega de luz, apague.",Explicito,Apagando a lâmpada.,Apagar Lâmpada,Desligar Televisão
+7,Ligue o ventilador.,Explicito,Ligando o ventilador.,Ligar Ventilador,Aumentar Volume
+8,"Ta quente, seria bom um ventilador",Explícito,Ligando o ventilador.,Ligar Ventilador,Diminuir Volume
+9,Podia vir um vento.,Implicito,Deseja ligar o ventilador?,Ligar Ventilador,Mudar Canal
+10,Desligue o ventilador.,Explicito,Desligando o ventilador.,Desligar Ventilador,
+11,Chega desse vento.,Implicito,Deseja desligar o ventilador?,Desligar Ventilador,
+12,Esse ventilador está me incomodando.,Implicito,Deseja desligar o ventilador?,Desligar Ventilador,
+13,Ligue a televisão.,Explícito,Ligando a televisão.,Ligar Televisão,
+14,"Quero assitir algo, uma TV seria bom.",Implicito,Deseja ligar a televisão?,Ligar Televisão,
+15,Seria bom um filme em.,Implicito,Deseja ligar a televisão?,Ligar Televisão,
+16,Desligue a televisão.,Implicito,Desligando a televisão.,Desligar Televisão,
+17,Cansei de assistir TV.,Implicito,Desligando a televisão.,Desligar Televisão,
+18,Ta dificil me concentrar com essa TV ligada.,Implícito,Deseja desligar a televisão?,Desligar Televisão,
+19,Aumente o volume da televisão.,Explícito,Aumentando o volume.,Aumentar Volume,
+20,Não to ouvindo nada da TV.,Implícito,Deseja aumentar o volume?,Aumentar Volume,
+21,Da pra subir o volume ai.,Explícito,Aumentando o volume.,Aumentar Volume,
+22,Diminua o volume da televisão.,Explicito,Diminuindo o volume.,Diminuir Volume,
+23,Ta muito alto essa TV.,Explicito,Diminuindo o volume.,Diminuir Volume,
+24,"Não tem ninguém surdo aqui, pra que esse volume todo ?",Implícito,Deseja diminuir o volume?,Diminuir Volume,
+25,Troque o canal da televisão.,Explicito,Mudando de canal.,Mudar Canal,
+26,Já cansei de ver isso.,Implicito,Deseja mudar de canal?,Mudar Canal,
+27,Que tal um canal de esporte.,Implicito,Deseja mudar de canal?,Mudar Canal,
+1,"Tá escuro demais, não consigo ver nada.",Implicito,Deseja acender a lâmpada?,Acender a Lâmpada,Acender a Lâmpada
+2,Acende a lâmpada aí por favor?,Explicito,Acendendo a lâmpada.,Acender a Lâmpada,Apagar Lâmpada
+3,"Não consigo ler, tá escuro aqui.",Explícito,Apagando a lâmpada.,Acender a Lâmpada,Ligar Ventilador
+4,"Tá muito claro, não consigo dormir.",Explícito,Apagando a lâmpada.,Apagar Lâmpada,Desligar Ventilador
+5,Essa luz tá me atrapalhando a ver.,Implicito,Deseja apagar a lâmpada?,Apagar Lâmpada,Ligar Televisão
+6,Tá muito calor aqui.,Implicito,Deseja ligar o ventilador?,Ligar Ventilador,Desligar Televisão
+7,Liga o ventilador?,Explícito,Ligando o ventilador.,Ligar Ventilador,Aumentar Volume
+8,Tá quente demais hoje.,Implicito,Deseja ligar o ventilador?,Ligar Ventilador,Diminuir Volume
+9,Tô sentindo muito frio.,Implicito,Deseja desligar o ventilador?,Desligar Ventilador,Mudar Canal
+10,Tá frio demais aqui.,Implicito,Deseja desligar o ventilador?,Desligar Ventilador,
+11,Esse vento tá me atrapalhando a ler.,Implicito,Deseja desligar o ventilador?,Desligar Ventilador,
+12,Ligar a televisão.,Explícito,Ligando a televisão.,Ligar Televisão,
+13,Por que a TV ainda tá desligada?,Implicito,Deseja ligar a televisão?,Ligar Televisão,
+14,"Quero ver as notícias, liga a TV?",Explícito,Ligando a televisão.,Ligar Televisão,
+15,"Cansei de assistir, vou fazer outra coisa.",Implicito,Deseja desligar a televisão?,Desligar Televisão,
+16,"Estou com sono, vou desligar a TV.",Explícito,Desligando a televisão.,Desligar Televisão,
+17,Não tô entendendo o que estão falando na TV.,Implicito,Deseja aumentar o volume?,Aumentar Volume,
+18,O volume da TV tá muito baixo.,Explícito,Aumentando o volume.,Aumentar Volume,
+19,O que é que ela disse na TV?,Implicito,Deseja aumentar o volume?,Aumentar Volume,
+20,O que foi que você disse? Não consigo te ouvir.,Implicito,Deseja diminuir o volume?,Diminuir Volume,
+21,Não estou conseguindo ouvir nada.,Implicito,Deseja aumentar o volume?,Diminuir Volume,
+22,O volume tá muito alto.,Explícito,Diminuindo o volume.,Diminuir Volume,
+23,"Queria assistir outra coisa, tá chato.",Implicito,Deseja mudar de canal?,Mudar Canal,
+24,Não sei por que ainda tô assistindo isso.,Implicito,Deseja mudar de canal?,Mudar Canal,
+25,Esse canal tá muito ruim.,Implicito,Deseja mudar de canal?,Mudar Canal,
+1,Tá escuro!,Implícito,Deseja acender a lâmpada?,Acender a Lâmpada,Acender a Lâmpada
+2,Acende a luz!,Explicito,Acendendo a lâmpada.,Acender a Lâmpada,Apagar Lâmpada
+3,"Luz, por favor!",Implícito,Deseja acender a lâmpada?,Acender a Lâmpada,Ligar Ventilador
+4,Apague essa luz!,Explícito,Apagando a lâmpada.,Apagar Lâmpada,Desligar Ventilador
+5,Apagar luzes!,Explícito,Apagando a lâmpada.,Apagar Lâmpada,Ligar Televisão
+6,Desligar luzes!,Explícito,Apagando a lâmpada.,Apagar Lâmpada,Desligar Televisão
+7,Está muito quente aqui!,Implicito,Deseja ligar o ventilador?,Ligar Ventilador,Aumentar Volume
+8,Ligar ventilador!,Explícito,Ligando o ventilador.,Ligar Ventilador,Diminuir Volume
+9,"Liga o vento, por favor!",Explícito,Ligando o ventilador.,Ligar Ventilador,Mudar Canal
+10,Desliga esse ventilador!,Explícito,Desligando o ventilador.,Desligar Ventilador,
+11,"Ventilador, desligar!",Explícito,Desligando o ventilador.,Desligar Ventilador,
+12,Está frio! Desliga o ventilador!,Explícito,Desligando o ventilador.,Desligar Ventilador,
+13,Quero ver televisão!,Implicito,Deseja ligar a televisão?,Ligar Televisão,
+14,Liga a TV!,Explícito,Ligando a televisão.,Ligar Televisão,
+15,"TV, ligar!",Explícito,Ligando a televisão.,Ligar Televisão,
+16,Cansei de TV por hoje!,Implicito,Deseja desligar a televisão?,Desligar Televisão,
+17,Não quero mais ver televisão!,Explícito,Desligando a televisão.,Desligar Televisão,
+18,Desligar a TV!,Explícito,Desligando a televisão.,Desligar Televisão,
+19,Aumente o volume!,Explícito,Aumentando o volume.,Aumentar Volume,
+20,O volume está baixo!,Implicito,Deseja aumentar o volume?,Aumentar Volume,
+21,Aumenta o som!,Explícito,Aumentando o volume.,Aumentar Volume,
+22,O som está muito alto!,Implicito,Deseja diminuir o volume?,Diminuir Volume,
+23,Diminuir o som!,Explícito,Diminuindo o volume.,Diminuir Volume,
+24,Diminua o volume!,Explícito,Diminuindo o volume.,Diminuir Volume,
+25,Esse programa está chato!,Implicito,Deseja mudar de canal?,Mudar Canal,
+26,Mude de canal!,Explícito,Mudando de canal.,Mudar Canal,
+27,Não quero ver esse canal!,Implicito,Deseja mudar de canal?,Mudar Canal,
+1,"Hum, tá muito escuro aqui.",Implicito,Deseja acender a lâmpada?,Acender a Lâmpada,Acender a Lâmpada
+2,Não to vendo nada.,Implicito,Deseja acender a lâmpada?,Acender a Lâmpada,Apagar Lâmpada
+3,Acende a luz.,Explicito,Acendendo a lâmpada.,Acender a Lâmpada,Ligar Ventilador
+4,Ta meio escuro.,Implicito,Deseja apagar a lâmpada?,Acender a Lâmpada,Desligar Ventilador
+5,Apaga a luz ai.,Explicito,Apagando a lâmpada.,Apagar Lâmpada,Ligar Televisão
+6,Ta muito claro.,Implicito,Deseja apagar a lâmpada?,Apagar Lâmpada,Desligar Televisão
+7,Minha vista ta doendo com essa claridade.,Implicito,Deseja apagar a lâmpada?,Apagar Lâmpada,Aumentar Volume
+8,Ta bem quente aqui.,Implicito,Deseja ligar o ventilador?,Ligar Ventilador,Diminuir Volume
+9,Não to aguentando esse calor.,Implicito,Deseja ligar o ventilador?,Ligar Ventilador,Mudar Canal
+10,Abriu o portão do inferno ?,Implicito,Deseja ligar o ventilador?,Ligar Ventilador,
+11,Ta meio frio aqui.,Implicito,Deseja desligar o ventilador?,Desligar Ventilador,
+12,Já refrescou bem.,Implicito,Deseja desligar o ventilador?,Desligar Ventilador,
+13,Desliga o ventilador ai.,Explicito,Desligando o ventilador.,Desligar Ventilador,
+14,Será que tem algo de bom na tv ?,Implicito,Deseja ligar a televisão?,Ligar Televisão,
+15,Quero ver tv.,Explicito,Ligando a televisão.,Ligar Televisão,
+16,"Liga a tv, por favor.",Explicito,Ligando a televisão.,Ligar Televisão,
+17,Ta chato essa tv já.,Implicito,Deseja desligar a televisão?,Desligar Televisão,
+18,Desliga a tv.,Explicito,Desligando a televisão.,Desligar Televisão,
+19,Não quero mais ver tv.,Implícito,Deseja desligar a televisão?,Desligar Televisão,
+20,Não to ouvindo nada.,Implícito,Deseja aumentar o volume?,Aumentar Volume,
+21,O som ta muito baixo.,Implícito,Deseja aumentar o volume?,Aumentar Volume,
+22,Assim não tem como ouvir.,Implícito,Deseja aumentar o volume?,Aumentar Volume,
+23,Esse som ta me estressando.,Implícito,Deseja diminuir o volume?,Diminuir Volume,
+24,Não da pra me concentrar com esse som alto.,Implícito,Deseja diminuir o volume?,Diminuir Volume,
+25,Abaixa o som.,Explicito,Diminuindo o volume.,Diminuir Volume,
+26,Que canal chato.,Implícito,Mudando de canal.,Mudar Canal,
+27,Troca o canal ai.,Explicito,Mudando de canal.,Mudar Canal,
+1,To vendo nada!,Implicito,Deseja acender a lâmpada?,Acender a Lâmpada,Acender a Lâmpada
+2,"Que calor, deus.",Implicito,Deseja ligar o ventilador?,Ligar Ventilador,Apagar Lâmpada
+3,"Grr, esfriou bastante em!",Implicito,Deseja desligar o ventilador?,Desligar Ventilador,Ligar Ventilador
+4,Será que tem algo interessante na tv?,Implicito,Deseja ligar a televisão?,Ligar Televisão,Desligar Ventilador
+5,Ta passando nada de bom aqui!,Implicito,Deseja desligar a televisão?,Mudar Canal,Ligar Televisão
+6,Que? to ouvindo nada nesta tv.,Implicito,Deseja aumentar o volume?,Aumentar Volume,Desligar Televisão
+7,Esse volume ta muito baixo,Explícito,Aumentando o volume.,Aumentar Volume,Aumentar Volume
+8,Que?? A tv não deixa eu te ouvir!,Implicito,Deseja diminuir o volume?,Diminuir Volume,Diminuir Volume
+9,Que escuridão,Implícito,Deseja acender a lâmpada?,Acender a Lâmpada,Mudar Canal
+10,Ta claro demais para dormir,Implicito,Deseja apagar a lâmpada?,Apagar Lâmpada,
+11,A ventilação aqui esta horrível,Implicito,Deseja ligar o ventilador?,Ligar Ventilador,
+12,Esse canal não esta legal,Implícito,Deseja mudar de canal?,Mudar Canal,
+13,To enxergando nada,Implícito,Deseja acender a lâmpada?,Acender a Lâmpada,
+14,Que friiiiio!!!,Implícito,Deseja desligar o ventilador?,Desligar Ventilador,
+15,"Bom, vou ir dormir!",Implícito,Deseja apagar a lâmpada?,Apagar Lâmpada,
+16,Esse programa é chato.,Implicito,Deseja mudar de canal?,Mudar Canal,
+17,Cansei de tv por hoje!,Implícito,Deseja desligar a televisão?,Desligar Televisão,
+18,Vou assistir tv agora!,Explícito,Ligando a televisão.,Ligar Televisão,
+19,Preciso abaixar o volume,Explícito,Diminuindo o volume.,Diminuir Volume,
+20,Preciso aumentar o volume,Explícito,Aumentando o volume.,Aumentar Volume,
+21,Preciso dar uma refrescada,Implícito,Deseja ligar o ventilador?,Ligar Ventilador,
+22,Troca de canal,Explícito,Mudando de canal.,Mudar Canal,
+23,Propagando péssima,Implícito,Deseja mudar de canal?,Mudar Canal,
+24,Esta muito abafado aqui,Implícito,Deseja ligar o ventilador?,Ligar Ventilador,
+25,O volume esta alto,Implícito,Deseja diminuir o volume?,Diminuir Volume,
+26,Estou derretendo de calor,Implícito,Deseja ligar o ventilador?,Ligar Ventilador,
+27,Quero assistir um filme,Implicito,Deseja ligar a televisão?,Ligar Televisão,
+1,Tá mó escuro aqui,Implicito,Deseja acender a lâmpada?,Acender a Lâmpada,Acender a Lâmpada
+2,Não to enxergando nada,Implicito,Deseja acender a lâmpada?,Acender a Lâmpada,Apagar Lâmpada
+3,Acende a luz ai,Explícito,Acendendo a lâmpada.,Acender a Lâmpada,Ligar Ventilador
+4,Apaga a luz ai,Explícito,Apagando a lâmpada.,Apagar Lâmpada,Desligar Ventilador
+5,Tá mó claro aqui,Implicito,Deseja apagar a lâmpada?,Apagar Lâmpada,Ligar Televisão
+6,Não consigo dormir de luz acessa,Implicito,Deseja apagar a lâmpada?,Apagar Lâmpada,Desligar Televisão
+7,Tá mó calor aqui,Implicito,Deseja ligar o ventilador?,Ligar Ventilador,Aumentar Volume
+8,To suando de tanto calor,Implicito,Deseja ligar o ventilador?,Ligar Ventilador,Diminuir Volume
+9,Liga o ventilador ai,Explícito,Ligando o ventilador.,Ligar Ventilador,Mudar Canal
+10,Tá meio frio ,Implicito,Deseja desligar o ventilador?,Desligar Ventilador,
+11,Tá ventando demais,Implicito,Deseja desligar o ventilador?,Desligar Ventilador,
+12,Desliga o ventilador ai,Explícito,Desligando o ventilador.,Desligar Ventilador,
+13,To afim de assistir televisão,Implícito,Deseja ligar a televisão?,Ligar Televisão,
+14,Bora ligar a tv,Explícito,Ligando a televisão.,Ligar Televisão,
+15,Liga a televisão ai,Explícito,Ligando a televisão.,Ligar Televisão,
+16,Não consigo estudar com a televisão ligada,Implicito,Deseja desligar a televisão?,Desligar Televisão,
+17,A tv ta ligada atoa,Implícito,Deseja desligar a televisão?,Desligar Televisão,
+18,Alguém desliga essa televisão,Explícito,Desligando a televisão.,Desligar Televisão,
+19,Não to escutando nada,Implicito,Deseja aumentar o volume?,Aumentar Volume,
+20,Esse volume tá muito baixo,Explícito,Aumentando o volume.,Aumentar Volume,
+21,Aumenta a tv ai,Explícito,Aumentando o volume.,Aumentar Volume,
+22,Essa televisão ta muito alta,Explícito,Diminuindo o volume.,Diminuir Volume,
+23,"Vou atender o telefone, diminui o volume ai",Explícito,Diminuindo o volume.,Diminuir Volume,
+24,Esse barulho tá me incomodando,Implícito,Deseja diminuir o volume?,Diminuir Volume,
+25,Eu não gosto desse programa,Implicito,Deseja mudar de canal?,Mudar Canal,
+26,"O jogo vai começar agora, muda o canal ai",Explícito,Mudando de canal.,Mudar Canal,
+27,Não gosto desse canal,Implicito,Deseja mudar de canal?,Mudar Canal,
