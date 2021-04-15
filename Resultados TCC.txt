@@ -1,0 +1,495 @@
+Intenções Implícitas
+
+TF-IDF:
+Hiperparâmetros:
+	LogisticRegression: {'C': 50, 'fit_intercept': False, 'penalty': 'l2', 'solver': 'newton-cg'}
+	SVC: {'C': 10, 'kernel': 'sigmoid', 'probability': True, 'shrinking': True}
+	KNeighborsClassifier: {'algorithm': 'auto', 'n_neighbors': 9, 'p': 1, 'weights': 'distance'}
+	DecisionTreeClassifier: {'criterion': 'gini', 'max_features': 'auto', 'splitter': 'best'}
+	GradientBoostingClassifier: {'criterion': 'mae', 'learning_rate': 0.1, 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_split': 5, 'n_estimators': 25}
+Resultados:
+	LogisticRegression:
+		Training Accuracy: 0.69
+		Test Accuracy: 0.52
+		Average Precision: 0.43
+		Average Recall: 0.49
+		Average F1-Score: 0.44
+	SVM:
+		Training Accuracy: 0.68
+		Test Accuracy: 0.52
+		Average Precision: 0.49
+		Average Recall: 0.49
+		Average F1-Score: 0.44
+	KNN:
+		Training Accuracy: 0.62
+		Test Accuracy: 0.44
+		Average Precision: 0.47
+		Average Recall: 0.42
+		Average F1-Score: 0.40
+	Decision Trees:
+		Training Accuracy: 0.47
+		Test Accuracy: 0.19
+		Average Precision: 0.17
+		Average Recall: 0.16
+		Average F1-Score: 0.12
+	Gradient Boosting:
+		Training Accuracy: 0.59
+		Test Accuracy: 0.52
+		Average Precision: 0.40
+		Average Recall: 0.49
+		Average F1-Score: 0.41
+
+Validação do experimento:
+	Logistic Regression x SVM
+	t statistic: -0.343
+	p value: 0.746
+
+	Logistic Regression x KNN
+	t statistic: 1.754
+	p value: 0.140
+
+	Logistic Regression x Decision Trees
+	t statistic: 2.087
+	p value: 0.091
+
+	Logistic Regression x Gradient Boosting
+	t statistic: 0.970
+	p value: 0.377
+	
+	SVM x KNN
+	t statistic: 4.341
+	p value: 0.007
+
+	SVM x Decision Trees
+	t statistic: 1.017
+	p value: 0.356
+
+	SVM x Gradient Boosting
+	t statistic: 0.000
+	p value: 1.000
+
+	KNN x Decision Trees
+	t statistic: 0.626
+	p value: 0.559
+
+	KNN x Gradient Boosting
+	t statistic: -1.861
+	p value: 0.122
+
+	Decision Trees x Gradient Boosting
+	t statistic: -1.118
+	p value: 0.314
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Word2Vec
+Hiperparâmetros:
+	LogisticRegression: {'C': 10, 'fit_intercept': True, 'penalty': 'l1', 'solver': 'saga'}
+	SVC: {'C': 10, 'kernel': 'linear', 'probability': True, 'shrinking': True}
+	KNeighborsClassifier: {'algorithm': 'auto', 'n_neighbors': 13, 'p': 2, 'weights': 'distance'}
+	DecisionTreeClassifier: {'criterion': 'gini', 'max_features': 'sqrt', 'splitter': 'best'}
+	GradientBoostingClassifier: {'criterion': 'friedman_mse', 'learning_rate': 0.1, 'max_depth': 3, 'max_features': 'log2', 'min_samples_split': 2, 'n_estimators': 25}
+
+Resultados:
+	LogisticRegression:
+		Training Accuracy: 0.57
+		Test Accuracy: 0.48
+		Average Precision: 0.38
+		Average Recall: 0.44
+		Average F1-Score: 0.39
+	SVM:
+		Training Accuracy: 0.54
+		Test Accuracy: 0.48
+		Average Precision: 0.37
+		Average Recall: 0.44
+		Average F1-Score: 0.38
+	KNN:
+		Training Accuracy: 0.37
+		Test Accuracy: 0.44
+		Average Precision: 0.43
+		Average Recall: 0.42
+		Average F1-Score: 0.39
+	Decision Trees:
+		Training Accuracy: 0.33
+		Test Accuracy: 0.30
+		Average Precision: 0.20
+		Average Recall: 0.29
+		Average F1-Score: 0.23
+	Gradient Boosting:
+		Training Accuracy: 0.46
+		Test Accuracy: 0.37
+		Average Precision: 0.29
+		Average Recall: 0.33
+		Average F1-Score: 0.30
+
+Validação do Experimento:
+	Logistic Regression x SVM
+	t statistic: 1.136
+	p value: 0.307
+
+	Logistic Regression x KNN
+	t statistic: 2.606
+	p value: 0.048
+
+	Logistic Regression x Decision Trees
+	t statistic: 3.914
+	p value: 0.011
+
+	Logistic Regression x Gradient Boosting
+	t statistic: 5.217
+	p value: 0.003
+
+	SVM x KNN
+	t statistic: 1.065
+	p value: 0.335
+
+	SVM x Decision Trees
+	t statistic: 2.177
+	p value: 0.081
+
+	SVM x Gradient Boosting
+	t statistic: 3.450
+	p value: 0.018
+
+	KNN x Decision Trees
+	t statistic: 2.883
+	p value: 0.034
+
+	KNN x Gradient Boosting
+	t statistic: 0.000
+	p value: 1.000
+
+	Decision Trees x Gradient Boosting
+	t statistic: -0.921
+	p value: 0.399
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Intenções Explícitas
+
+TF-IDF
+Hiperparâmetros:
+	LogisticRegression: {'C': 50, 'fit_intercept': False, 'penalty': 'l2', 'solver': 'newton-cg'}
+	SVC: {'C': 10, 'kernel': 'sigmoid', 'probability': True, 'shrinking': True}
+	KNeighborsClassifier: {'algorithm': 'auto', 'n_neighbors': 9, 'p': 2, 'weights': 'distance'}
+	DecisionTreeClassifier: {'criterion': 'gini', 'max_features': 'sqrt', 'splitter': 'best'}
+	GradientBoostingClassifier: {'criterion': 'mse', 'learning_rate': 0.5, 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_split': 2, 'n_estimators': 25}
+
+Resultados:
+	LogisticRegression:
+		Training Accuracy: 0.75
+		Test Accuracy: 0.60
+		Average Precision: 0.59
+		Average Recall: 0.61
+		Average F1-Score: 0.58
+	SVM:
+		Training Accuracy: 0.75
+		Test Accuracy: 0.55
+		Average Precision: 0.57
+		Average Recall: 0.57
+		Average F1-Score: 0.56
+	KNN:
+		Training Accuracy: 0.60
+		Test Accuracy: 0.55
+		Average Precision: 0.46
+		Average Recall: 0.54
+		Average F1-Score: 0.48
+	Decision Trees:
+		Training Accuracy: 0.35
+		Test Accuracy: 0.40
+		Average Precision: 0.29
+		Average Recall: 0.39
+		Average F1-Score: 0.32
+	Gradient Boosting:
+		Training Accuracy: 0.64
+		Test Accuracy: 0.45
+		Average Precision: 0.38
+		Average Recall: 0.46
+		Average F1-Score: 0.38
+
+Validação do Experimento:
+	Logistic Regression x SVM
+	t statistic: -0.650
+	p value: 0.544
+
+	Logistic Regression x KNN
+	t statistic: 2.887
+	p value: 0.034
+
+	Logistic Regression x Decision Trees
+	t statistic: 0.216
+	p value: 0.837
+
+	Logistic Regression x Gradient Boosting
+	t statistic: 2.722
+	p value: 0.042
+
+	SVM x KNN
+	t statistic: 2.053
+	p value: 0.095
+
+	SVM x Decision Trees
+	t statistic: 2.356
+	p value: 0.065
+
+	SVM x Gradient Boosting
+	t statistic: 1.576	
+	p value: 0.176
+
+	KNN x Decision Trees
+	t statistic: 2.104
+	p value: 0.089
+
+	KNN x Gradient Boosting
+	t statistic: 0.877
+	p value: 0.421
+
+	Decision Trees x Gradient Boosting
+	t statistic: -0.429
+	p value: 0.686
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Word2Vec
+Hiperparâmetros:
+	LogisticRegression: {'C': 50, 'fit_intercept': True, 'penalty': 'l1', 'solver': 'saga'}
+	SVC: {'C': 50, 'kernel': 'sigmoid', 'probability': True, 'shrinking': True}
+	KNeighborsClassifier: {'algorithm': 'auto', 'n_neighbors': 11, 'p': 1, 'weights': 'uniform'}
+	DecisionTreeClassifier: {'criterion': 'gini', 'max_features': 'sqrt', 'splitter': 'best'}
+	GradientBoostingClassifier: {'criterion': 'friedman_mse', 'learning_rate': 1, 'max_depth': 5, 'max_features': 'log2', 'min_samples_split': 5, 'n_estimators': 10}
+Resultados:
+	LogisticRegression:
+		Training Accuracy: 0.58
+		Test Accuracy: 0.70
+		Average Precision: 0.70
+		Average Recall: 0.69
+		Average F1-Score: 0.68
+	SVM:
+		Training Accuracy: 0.57
+		Test Accuracy: 0.50
+		Average Precision: 0.56
+		Average Recall: 0.48
+		Average F1-Score: 0.49
+	KNN:
+		Training Accuracy: 0.51
+		Test Accuracy: 0.50
+		Average Precision: 0.39
+		Average Recall: 0.48
+		Average F1-Score: 0.42
+	Decision Trees:
+		Training Accuracy: 0.32
+		Test Accuracy: 0.45
+		Average Precision: 0.57
+		Average Recall: 0.46
+		Average F1-Score: 0.47
+	Gradient Boosting:
+		Training Accuracy: 0.32
+		Test Accuracy: 0.40
+		Average Precision: 0.39
+		Average Recall: 0.39
+		Average F1-Score: 0.36
+
+Validação do Experimento:
+	Logistic Regression x SVM
+	t statistic: 0.000
+	p value: 1.000
+
+	Logistic Regression x KNN
+	t statistic: 1.577
+	p value: 0.176
+
+	Logistic Regression x Decision Trees
+	t statistic: 2.593
+	p value: 0.049
+
+	Logistic Regression x Gradient Boosting
+	t statistic: 1.902
+	p value: 0.116
+
+	SVM x KNN
+	t statistic: 1.983
+	p value: 0.104
+
+	SVM x Decision Trees
+	t statistic: 1.178
+	p value: 0.292
+
+	SVM x Gradient Boosting
+	t statistic: 2.417
+	p value: 0.060
+
+	KNN x Decision Trees
+	t statistic: 1.036
+	p value: 0.348
+
+	KNN x Gradient Boosting
+	t statistic: 1.142
+	p value: 0.305
+	
+	Decision Trees x Gradient Boosting
+	t statistic: -1.658
+	p value: 0.158
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Todo o Conjunto de Dados
+
+TF-IDF
+Hiperparâmetros:
+	LogisticRegression: {'C': 10, 'fit_intercept': True, 'penalty': 'l2', 'solver': 'saga'}
+	SVC: {'C': 10, 'kernel': 'linear', 'probability': True, 'shrinking': True}
+	KNeighborsClassifier: {'algorithm': 'auto', 'n_neighbors': 11, 'p': 1, 'weights': 'distance'}
+	DecisionTreeClassifier: {'criterion': 'gini', 'max_features': 'sqrt', 'splitter': 'best'}
+	GradientBoostingClassifier: {'criterion': 'mse', 'learning_rate': 0.1, 'max_depth': 3, 'max_features': 'sqrt', 'min_samples_split': 5, 'n_estimators': 25}
+Resultados:
+	LogisticRegression:
+		Training Accuracy: 0.73
+		Test Accuracy: 0.70
+		Average Precision: 0.72
+		Average Recall: 0.70
+		Average F1-Score: 0.68
+	SVM:
+		Training Accuracy: 0.73
+		Test Accuracy: 0.72
+		Average Precision: 0.75
+		Average Recall: 0.72
+		Average F1-Score: 0.72
+	KNN:
+		Training Accuracy: 0.61
+		Test Accuracy: 0.66
+		Average Precision: 0.60
+		Average Recall: 0.64
+		Average F1-Score: 0.61
+	Decision Trees:
+		Training Accuracy: 0.54
+		Test Accuracy: 0.47
+		Average Precision: 0.47
+		Average Recall: 0.44
+		Average F1-Score: 0.44
+	Gradient Boosting:
+		Training Accuracy: 0.57
+		Test Accuracy: 0.47
+		Average Precision: 0.58
+		Average Recall: 0.45
+		Average F1-Score: 0.44
+
+Validação do experimento:
+	Logistic Regression x SVM
+	t statistic: 0.596
+	p value: 0.577
+
+	Logistic Regression x KNN
+	t statistic: 2.487
+	p value: 0.055
+
+	Logistic Regression x Decision Trees
+	t statistic: 2.387
+	p value: 0.063
+
+	Logistic Regression x Gradient Boosting
+	t statistic: 2.705
+	p value: 0.043
+
+	SVM x KNN
+	t statistic: 2.380
+	p value: 0.063
+
+	SVM x Decision Trees
+	t statistic: 2.654
+	p value: 0.045
+
+	SVM x Gradient Boosting
+	t statistic: 2.572
+	p value: 0.050
+
+	KNN x Decision Trees
+	t statistic: 0.989
+	p value: 0.368
+
+	KNN x Gradient Boosting
+	t statistic: 0.577
+	p value: 0.589
+
+	Decision Trees x Gradient Boosting
+	t statistic: -2.050
+	p value: 0.096
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Word2Vec
+Hiperparâmetros:
+	LogisticRegression: {'C': 10, 'fit_intercept': True, 'penalty': 'l2', 'solver': 'liblinear'}
+	SVC: {'C': 10, 'kernel': 'linear', 'probability': True, 'shrinking': True}
+	KNeighborsClassifier: {'algorithm': 'auto', 'n_neighbors': 9, 'p': 2, 'weights': 'distance'}
+	DecisionTreeClassifier: {'criterion': 'gini', 'max_features': 'auto', 'splitter': 'random'}
+	GradientBoostingClassifier: {'criterion': 'friedman_mse', 'learning_rate': 0.1, 'max_depth': 3, 'max_features': 'sqrt', 'min_samples_split': 5, 'n_estimators': 25}
+Resultados:
+	LogisticRegression:
+		Training Accuracy: 0.62
+		Test Accuracy: 0.66
+		Average Precision: 0.67
+		Average Recall: 0.65
+		Average F1-Score: 0.64
+	SVM:
+		Training Accuracy: 0.59
+		Test Accuracy: 0.57
+		Average Precision: 0.65
+		Average Recall: 0.59
+		Average F1-Score: 0.58
+	KNN:
+		Training Accuracy: 0.42
+		Test Accuracy: 0.30
+		Average Precision: 0.36
+		Average Recall: 0.29
+		Average F1-Score: 0.28
+	Decision Trees:
+		Training Accuracy: 0.25
+		Test Accuracy: 0.32
+		Average Precision: 0.31
+		Average Recall: 0.32
+		Average F1-Score: 0.31
+	Gradient Boosting:
+		Training Accuracy: 0.41
+		Test Accuracy: 0.47
+		Average Precision: 0.46
+		Average Recall: 0.47
+		Average F1-Score: 0.44
+
+Validação do experimento:
+	Logistic Regression x SVM
+	t statistic: -0.192
+	p value: 0.855
+
+	Logistic Regression x KNN
+	t statistic: 2.301
+	p value: 0.070
+
+	Logistic Regression x Decision Trees
+	t statistic: 6.007
+	p value: 0.002
+
+	Logistic Regression x Gradient Boosting
+	t statistic: 2.949
+	p value: 0.032
+
+	SVM x KNN
+	t statistic: 1.898
+	p value: 0.116
+
+	SVM x Decision Trees
+	t statistic: 3.142
+	p value: 0.026
+
+	SVM x Gradient Boosting
+	t statistic: 2.871
+	p value: 0.035
+
+	KNN x Decision Trees
+	t statistic: 2.626
+	p value: 0.047
+
+	KNN x Gradient Boosting
+	t statistic: -0.439
+	p value: 0.679
+
+	Decision Trees x Gradient Boosting
+	t statistic: -3.623
+	p value: 0.015
