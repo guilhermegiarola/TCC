@@ -3,165 +3,283 @@ Intenções Implícitas
 TF-IDF:
 Hiperparâmetros:
 	LogisticRegression: {'C': 50, 'fit_intercept': False, 'penalty': 'l2', 'solver': 'newton-cg'}
-	SVC: {'C': 10, 'kernel': 'sigmoid', 'probability': True, 'shrinking': True}
-	KNeighborsClassifier: {'algorithm': 'auto', 'n_neighbors': 9, 'p': 1, 'weights': 'distance'}
-	DecisionTreeClassifier: {'criterion': 'gini', 'max_features': 'auto', 'splitter': 'best'}
-	GradientBoostingClassifier: {'criterion': 'mae', 'learning_rate': 0.1, 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_split': 5, 'n_estimators': 25}
+	SVC: {'C': 10, 'kernel': 'sigmoid', 'shrinking': True}
+	KNeighborsClassifier: {'algorithm': 'auto', 'leaf_size': 15, 'n_neighbors': 9, 'weights': 'distance'}
+	DecisionTreeClassifier: {'criterion': 'gini', 'max_features': 'log2', 'min_samples_split': 4, 'splitter': 'best'}
+	GradientBoostingClassifier: {'criterion': 'friedman_mse', 'learning_rate': 0.1, 'max_depth': 5, 'max_features': 'log2', 'min_samples_split': 4, 'n_estimators': 50}
 Resultados:
 	LogisticRegression:
 		Training Accuracy: 0.69
-		Test Accuracy: 0.52
-		Average Precision: 0.43
-		Average Recall: 0.49
-		Average F1-Score: 0.44
+              precision    recall  f1-score   support
+
+           0       0.43      1.00      0.60         3
+           1       0.00      0.00      0.00         2
+           2       0.33      0.33      0.33         3
+           3       0.67      0.67      0.67         3
+           4       0.00      0.00      0.00         3
+           5       0.40      0.67      0.50         3
+           6       0.50      0.50      0.50         2
+           7       1.00      0.75      0.86         4
+           8       0.50      0.50      0.50         4
+
+    accuracy                           0.52        27
+   macro avg       0.43      0.49      0.44        27
+weighted avg       0.46      0.52      0.47        27
+
 	SVM:
 		Training Accuracy: 0.68
-		Test Accuracy: 0.52
-		Average Precision: 0.49
-		Average Recall: 0.49
-		Average F1-Score: 0.44
+              precision    recall  f1-score   support
+
+           0       0.60      1.00      0.75         3
+           1       0.00      0.00      0.00         2
+           2       0.33      0.33      0.33         3
+           3       0.50      0.67      0.57         3
+           4       0.00      0.00      0.00         3
+           5       0.33      0.67      0.44         3
+           6       1.00      0.50      0.67         2
+           7       0.67      1.00      0.80         4
+           8       1.00      0.25      0.40         4
+
+    accuracy                           0.52        27
+   macro avg       0.49      0.49      0.44        27
+weighted avg       0.52      0.52      0.46        27
+
 	KNN:
-		Training Accuracy: 0.62
-		Test Accuracy: 0.44
-		Average Precision: 0.47
-		Average Recall: 0.42
-		Average F1-Score: 0.40
+		Training Accuracy: 0.54
+              precision    recall  f1-score   support
+
+           0       0.60      1.00      0.75         3
+           1       0.00      0.00      0.00         2
+           2       1.00      0.33      0.50         3
+           3       0.67      0.67      0.67         3
+           4       0.00      0.00      0.00         3
+           5       0.60      1.00      0.75         3
+           6       0.33      0.50      0.40         2
+           7       0.50      0.75      0.60         4
+           8       0.67      0.50      0.57         4
+
+    accuracy                           0.56        27
+   macro avg       0.49      0.53      0.47        27
+weighted avg       0.52      0.56      0.50        27
+
 	Decision Trees:
-		Training Accuracy: 0.47
-		Test Accuracy: 0.19
-		Average Precision: 0.17
-		Average Recall: 0.16
-		Average F1-Score: 0.12
+		Training Accuracy: 0.44
+              precision    recall  f1-score   support
+
+           0       0.50      0.33      0.40         3
+           1       0.00      0.00      0.00         2
+           2       1.00      0.67      0.80         3
+           3       0.50      0.67      0.57         3
+           4       0.00      0.00      0.00         3
+           5       0.00      0.00      0.00         3
+           6       0.00      0.00      0.00         2
+           7       0.38      0.75      0.50         4
+           8       0.00      0.00      0.00         4
+
+    accuracy                           0.30        27
+   macro avg       0.26      0.27      0.25        27
+weighted avg       0.28      0.30      0.27        27
+
 	Gradient Boosting:
-		Training Accuracy: 0.59
-		Test Accuracy: 0.52
-		Average Precision: 0.40
-		Average Recall: 0.49
-		Average F1-Score: 0.41
+		Training Accuracy: 0.67
+              precision    recall  f1-score   support
+
+           0       0.60      1.00      0.75         3
+           1       0.00      0.00      0.00         2
+           2       1.00      0.33      0.50         3
+           3       1.00      1.00      1.00         3
+           4       0.00      0.00      0.00         3
+           5       0.50      1.00      0.67         3
+           6       0.33      0.50      0.40         2
+           7       0.57      1.00      0.73         4
+           8       0.50      0.25      0.33         4
+
+    accuracy                           0.59        27
+   macro avg       0.50      0.56      0.49        27
+weighted avg       0.53      0.59      0.51        27
 
 Validação do experimento:
-	Logistic Regression x SVM
-	t statistic: -0.343
-	p value: 0.746
+    Logistic Regression x SVM
+    t statistic: -0.343
+    p value: 0.746
 
-	Logistic Regression x KNN
-	t statistic: 1.754
-	p value: 0.140
+    Logistic Regression x KNN
+    t statistic: 0.791
+    p value: 0.465
 
-	Logistic Regression x Decision Trees
-	t statistic: 2.087
-	p value: 0.091
+    Logistic Regression x Decision Trees
+    t statistic: 1.841
+    p value: 0.125
 
-	Logistic Regression x Gradient Boosting
-	t statistic: 0.970
-	p value: 0.377
-	
-	SVM x KNN
-	t statistic: 4.341
-	p value: 0.007
+    Logistic Regression x Gradient Boosting
+    t statistic: 0.000
+    p value: 1.000
 
-	SVM x Decision Trees
-	t statistic: 1.017
-	p value: 0.356
+    SVM x KNN
+    t statistic: 1.348
+    p value: 0.235
 
-	SVM x Gradient Boosting
-	t statistic: 0.000
-	p value: 1.000
+    SVM x Decision Trees
+    t statistic: 1.796
+    p value: 0.132
 
-	KNN x Decision Trees
-	t statistic: 0.626
-	p value: 0.559
+    SVM x Gradient Boosting
+    t statistic: 0.303
+    p value: 0.774
 
-	KNN x Gradient Boosting
-	t statistic: -1.861
-	p value: 0.122
+    KNN x Decision Trees
+    t statistic: 1.306
+    p value: 0.248
 
-	Decision Trees x Gradient Boosting
-	t statistic: -1.118
-	p value: 0.314
+    KNN x Gradient Boosting
+    t statistic: -1.041
+    p value: 0.345
+
+    Decision Trees x Gradient Boosting
+    t statistic: -2.449
+    p value: 0.058
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Word2Vec
 Hiperparâmetros:
 	LogisticRegression: {'C': 10, 'fit_intercept': True, 'penalty': 'l1', 'solver': 'saga'}
-	SVC: {'C': 10, 'kernel': 'linear', 'probability': True, 'shrinking': True}
-	KNeighborsClassifier: {'algorithm': 'auto', 'n_neighbors': 13, 'p': 2, 'weights': 'distance'}
-	DecisionTreeClassifier: {'criterion': 'gini', 'max_features': 'sqrt', 'splitter': 'best'}
-	GradientBoostingClassifier: {'criterion': 'friedman_mse', 'learning_rate': 0.1, 'max_depth': 3, 'max_features': 'log2', 'min_samples_split': 2, 'n_estimators': 25}
+	SVC: {'C': 10, 'kernel': 'linear', 'shrinking': True}
+	KNeighborsClassifier: {'algorithm': 'auto', 'leaf_size': 15, 'n_neighbors': 13, 'weights': 'distance'}
+	DecisionTreeClassifier: {'criterion': 'gini', 'max_features': 'auto', 'min_samples_split': 4, 'splitter': 'best'}
+	GradientBoostingClassifier: {'criterion': 'friedman_mse', 'learning_rate': 0.25, 'max_depth': 2, 'max_features': 'log2', 'min_samples_split': 4, 'n_estimators': 100}
 
 Resultados:
 	LogisticRegression:
-		Training Accuracy: 0.57
-		Test Accuracy: 0.48
-		Average Precision: 0.38
-		Average Recall: 0.44
-		Average F1-Score: 0.39
+		Training Accuracy: 0.58
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00         3
+           1       0.00      0.00      0.00         2
+           2       0.50      0.33      0.40         3
+           3       0.40      0.67      0.50         3
+           4       0.00      0.00      0.00         3
+           5       0.38      1.00      0.55         3
+           6       0.00      0.00      0.00         2
+           7       0.50      0.50      0.50         4
+           8       0.67      0.50      0.57         4
+
+    accuracy                           0.48        27
+   macro avg       0.38      0.44      0.39        27
+weighted avg       0.43      0.48      0.43        27
+
 	SVM:
 		Training Accuracy: 0.54
-		Test Accuracy: 0.48
-		Average Precision: 0.37
-		Average Recall: 0.44
-		Average F1-Score: 0.38
-	KNN:
+              precision    recall  f1-score   support
+
+           0       0.60      1.00      0.75         3
+           1       0.00      0.00      0.00         2
+           2       0.50      0.33      0.40         3
+           3       0.50      0.67      0.57         3
+           4       0.00      0.00      0.00         3
+           5       0.43      1.00      0.60         3
+           6       0.00      0.00      0.00         2
+           7       0.67      0.50      0.57         4
+           8       0.67      0.50      0.57         4
+
+    accuracy                           0.48        27
+   macro avg       0.37      0.44      0.38        27
+weighted avg       0.42      0.48      0.43        27
+	
+    KNN:
 		Training Accuracy: 0.37
-		Test Accuracy: 0.44
-		Average Precision: 0.43
-		Average Recall: 0.42
-		Average F1-Score: 0.39
+              precision    recall  f1-score   support
+
+           0       1.00      0.33      0.50         3
+           1       0.50      0.50      0.50         2
+           2       0.50      0.33      0.40         3
+           3       0.40      0.67      0.50         3
+           4       0.00      0.00      0.00         3
+           5       0.29      0.67      0.40         3
+           6       0.00      0.00      0.00         2
+           7       0.40      0.50      0.44         4
+           8       0.75      0.75      0.75         4
+
+    accuracy                           0.44        27
+   macro avg       0.43      0.42      0.39        27
+weighted avg       0.45      0.44      0.41        27
+
 	Decision Trees:
 		Training Accuracy: 0.33
-		Test Accuracy: 0.30
-		Average Precision: 0.20
-		Average Recall: 0.29
-		Average F1-Score: 0.23
+              precision    recall  f1-score   support
+
+           0       0.33      0.33      0.33         3
+           1       0.00      0.00      0.00         2
+           2       0.20      0.33      0.25         3
+           3       0.00      0.00      0.00         3
+           4       0.00      0.00      0.00         3
+           5       0.00      0.00      0.00         3
+           6       0.33      0.50      0.40         2
+           7       0.67      0.50      0.57         4
+           8       0.00      0.00      0.00         4
+
+    accuracy                           0.19        27
+   macro avg       0.17      0.19      0.17        27
+weighted avg       0.18      0.19      0.18        27
+        
 	Gradient Boosting:
-		Training Accuracy: 0.46
-		Test Accuracy: 0.37
-		Average Precision: 0.29
-		Average Recall: 0.33
-		Average F1-Score: 0.30
+		Training Accuracy: 0.56
+              precision    recall  f1-score   support
+
+           0       1.00      0.67      0.80         3
+           1       0.00      0.00      0.00         2
+           2       0.25      0.33      0.29         3
+           3       0.50      0.67      0.57         3
+           4       0.00      0.00      0.00         3
+           5       0.25      0.67      0.36         3
+           6       0.00      0.00      0.00         2
+           7       0.75      0.75      0.75         4
+           8       0.50      0.50      0.50         4
+
+    accuracy                           0.44        27
+   macro avg       0.36      0.40      0.36        27
+weighted avg       0.41      0.44      0.41        27
 
 Validação do Experimento:
-	Logistic Regression x SVM
-	t statistic: 1.136
-	p value: 0.307
+    Logistic Regression x SVM
+    t statistic: 1.026
+    p value: 0.352
 
-	Logistic Regression x KNN
-	t statistic: 2.606
-	p value: 0.048
+    Logistic Regression x KNN
+    t statistic: 3.038
+    p value: 0.029
 
-	Logistic Regression x Decision Trees
-	t statistic: 3.914
-	p value: 0.011
+    Logistic Regression x Decision Trees
+    t statistic: 3.558
+    p value: 0.016
 
-	Logistic Regression x Gradient Boosting
-	t statistic: 5.217
-	p value: 0.003
+    Logistic Regression x Gradient Boosting
+    t statistic: 2.928
+    p value: 0.033
 
-	SVM x KNN
-	t statistic: 1.065
-	p value: 0.335
+    SVM x KNN
+    t statistic: 1.065
+    p value: 0.335
 
-	SVM x Decision Trees
-	t statistic: 2.177
-	p value: 0.081
+    SVM x Decision Trees
+    t statistic: 2.006
+    p value: 0.101
 
-	SVM x Gradient Boosting
-	t statistic: 3.450
-	p value: 0.018
+    SVM x Gradient Boosting
+    t statistic: 3.162
+    p value: 0.025
 
-	KNN x Decision Trees
-	t statistic: 2.883
-	p value: 0.034
+    KNN x Decision Trees
+    t statistic: 2.000
+    p value: 0.102
 
-	KNN x Gradient Boosting
-	t statistic: 0.000
-	p value: 1.000
+    KNN x Gradient Boosting
+    t statistic: 0.000
+    p value: 1.000
 
-	Decision Trees x Gradient Boosting
-	t statistic: -0.921
-	p value: 0.399
+    Decision Trees x Gradient Boosting
+    t statistic: -1.122
+    p value: 0.313
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -170,42 +288,101 @@ Intenções Explícitas
 TF-IDF
 Hiperparâmetros:
 	LogisticRegression: {'C': 50, 'fit_intercept': False, 'penalty': 'l2', 'solver': 'newton-cg'}
-	SVC: {'C': 10, 'kernel': 'sigmoid', 'probability': True, 'shrinking': True}
-	KNeighborsClassifier: {'algorithm': 'auto', 'n_neighbors': 9, 'p': 2, 'weights': 'distance'}
-	DecisionTreeClassifier: {'criterion': 'gini', 'max_features': 'sqrt', 'splitter': 'best'}
-	GradientBoostingClassifier: {'criterion': 'mse', 'learning_rate': 0.5, 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_split': 2, 'n_estimators': 25}
+	SVC: {'C': 10, 'kernel': 'sigmoid', 'shrinking': True}
+	KNeighborsClassifier: {'algorithm': 'auto', 'leaf_size': 15, 'n_neighbors': 9, 'weights': 'distance'}
+	DecisionTreeClassifier: {'criterion': 'gini', 'max_features': 'auto', 'min_samples_split': 4, 'splitter': 'best'}
+	GradientBoostingClassifier: {'criterion': 'friedman_mse', 'learning_rate': 0.05, 'max_depth': 3, 'max_features': 'sqrt', 'min_samples_split': 4, 'n_estimators': 100}
 
 Resultados:
 	LogisticRegression:
 		Training Accuracy: 0.75
-		Test Accuracy: 0.60
-		Average Precision: 0.59
-		Average Recall: 0.61
-		Average F1-Score: 0.58
+              precision    recall  f1-score   support
+
+           0       0.50      0.67      0.57         3
+           1       0.00      0.00      0.00         2
+           2       0.67      1.00      0.80         2
+           3       0.50      0.50      0.50         2
+           4       0.67      1.00      0.80         2
+           5       1.00      0.50      0.67         2
+           6       0.50      0.33      0.40         3
+           7       0.50      0.50      0.50         2
+           8       1.00      1.00      1.00         2
+
+    accuracy                           0.60        20
+   macro avg       0.59      0.61      0.58        20
+weighted avg       0.58      0.60      0.57        20
+	
 	SVM:
 		Training Accuracy: 0.75
-		Test Accuracy: 0.55
-		Average Precision: 0.57
-		Average Recall: 0.57
-		Average F1-Score: 0.56
+              precision    recall  f1-score   support
+
+           0       0.33      0.33      0.33         3
+           1       0.00      0.00      0.00         2
+           2       0.67      1.00      0.80         2
+           3       0.50      0.50      0.50         2
+           4       0.67      1.00      0.80         2
+           5       1.00      0.50      0.67         2
+           6       0.50      0.33      0.40         3
+           7       0.50      0.50      0.50         2
+           8       1.00      1.00      1.00         2
+
+    accuracy                           0.55        20
+   macro avg       0.57      0.57      0.56        20
+weighted avg       0.56      0.55      0.54        20
+	
 	KNN:
 		Training Accuracy: 0.60
-		Test Accuracy: 0.55
-		Average Precision: 0.46
-		Average Recall: 0.54
-		Average F1-Score: 0.48
+              precision    recall  f1-score   support
+
+           0       0.50      0.67      0.57         3
+           1       0.00      0.00      0.00         2
+           2       0.50      1.00      0.67         2
+           3       0.00      0.00      0.00         2
+           4       0.67      1.00      0.80         2
+           5       0.00      0.00      0.00         2
+           6       0.50      0.67      0.57         3
+           7       1.00      0.50      0.67         2
+           8       1.00      1.00      1.00         2
+
+    accuracy                           0.55        20
+   macro avg       0.46      0.54      0.48        20
+weighted avg       0.47      0.55      0.48        20
+	
 	Decision Trees:
-		Training Accuracy: 0.35
-		Test Accuracy: 0.40
-		Average Precision: 0.29
-		Average Recall: 0.39
-		Average F1-Score: 0.32
+		Training Accuracy: 0.56
+              precision    recall  f1-score   support
+
+           0       0.50      0.33      0.40         3
+           1       0.50      1.00      0.67         2
+           2       0.40      1.00      0.57         2
+           3       0.00      0.00      0.00         2
+           4       0.00      0.00      0.00         2
+           5       0.00      0.00      0.00         2
+           6       0.33      0.33      0.33         3
+           7       0.50      1.00      0.67         2
+           8       1.00      0.50      0.67         2
+
+    accuracy                           0.45        20
+   macro avg       0.36      0.46      0.37        20
+weighted avg       0.36      0.45      0.37        20
+	
 	Gradient Boosting:
-		Training Accuracy: 0.64
-		Test Accuracy: 0.45
-		Average Precision: 0.38
-		Average Recall: 0.46
-		Average F1-Score: 0.38
+		Training Accuracy: 0.66
+              precision    recall  f1-score   support
+
+           0       0.25      0.33      0.29         3
+           1       0.00      0.00      0.00         2
+           2       0.67      1.00      0.80         2
+           3       0.00      0.00      0.00         2
+           4       0.00      0.00      0.00         2
+           5       1.00      0.50      0.67         2
+           6       0.33      0.33      0.33         3
+           7       0.33      0.50      0.40         2
+           8       1.00      1.00      1.00         2
+
+    accuracy                           0.40        20
+   macro avg       0.40      0.41      0.39        20
+weighted avg       0.39      0.40      0.38        20
 
 Validação do Experimento:
 	Logistic Regression x SVM
@@ -217,117 +394,177 @@ Validação do Experimento:
 	p value: 0.034
 
 	Logistic Regression x Decision Trees
-	t statistic: 0.216
-	p value: 0.837
+	t statistic: 1.489
+	p value: 0.197
 
 	Logistic Regression x Gradient Boosting
-	t statistic: 2.722
-	p value: 0.042
+	t statistic: 1.505
+	p value: 0.193
 
 	SVM x KNN
 	t statistic: 2.053
 	p value: 0.095
 
 	SVM x Decision Trees
-	t statistic: 2.356
-	p value: 0.065
+	t statistic: 1.400
+	p value: 0.220
 
 	SVM x Gradient Boosting
-	t statistic: 1.576	
-	p value: 0.176
+	t statistic: 1.394
+	p value: 0.222
 
 	KNN x Decision Trees
-	t statistic: 2.104
-	p value: 0.089
+	t statistic: 0.392
+	p value: 0.711
 
 	KNN x Gradient Boosting
-	t statistic: 0.877
-	p value: 0.421
-
+	t statistic: -0.383
+	p value: 0.717
+	
 	Decision Trees x Gradient Boosting
-	t statistic: -0.429
-	p value: 0.686
+	t statistic: -0.578
+	p value: 0.588
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Word2Vec
-Hiperparâmetros:
-	LogisticRegression: {'C': 50, 'fit_intercept': True, 'penalty': 'l1', 'solver': 'saga'}
-	SVC: {'C': 50, 'kernel': 'sigmoid', 'probability': True, 'shrinking': True}
-	KNeighborsClassifier: {'algorithm': 'auto', 'n_neighbors': 11, 'p': 1, 'weights': 'uniform'}
-	DecisionTreeClassifier: {'criterion': 'gini', 'max_features': 'sqrt', 'splitter': 'best'}
-	GradientBoostingClassifier: {'criterion': 'friedman_mse', 'learning_rate': 1, 'max_depth': 5, 'max_features': 'log2', 'min_samples_split': 5, 'n_estimators': 10}
+Hiperparâmetros:  
+    LogisticRegression: {'C': 50, 'fit_intercept': False, 'penalty': 'l2', 'solver': 'liblinear'}
+    SVC: {'C': 10, 'kernel': 'rbf', 'shrinking': True}
+    KNeighborsClassifier: {'algorithm': 'auto', 'leaf_size': 15, 'n_neighbors': 11, 'weights': 'distance'}
+    DecisionTreeClassifier: {'criterion': 'entropy', 'max_features': 'log2', 'min_samples_split': 2, 'splitter': 'best'}
+    GradientBoostingClassifier: {'criterion': 'friedman_mse', 'learning_rate': 0.05, 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_split': 2, 'n_estimators': 50}
+
 Resultados:
 	LogisticRegression:
 		Training Accuracy: 0.58
-		Test Accuracy: 0.70
-		Average Precision: 0.70
-		Average Recall: 0.69
-		Average F1-Score: 0.68
+              precision    recall  f1-score   support
+
+           0       0.50      0.67      0.57         3
+           1       0.00      0.00      0.00         2
+           2       0.33      0.50      0.40         2
+           3       0.00      0.00      0.00         2
+           4       1.00      1.00      1.00         2
+           5       0.00      0.00      0.00         2
+           6       0.60      1.00      0.75         3
+           7       1.00      1.00      1.00         2
+           8       1.00      1.00      1.00         2
+
+    accuracy                           0.60        20
+   macro avg       0.49      0.57      0.52        20
+weighted avg       0.50      0.60      0.54        20
+
 	SVM:
-		Training Accuracy: 0.57
-		Test Accuracy: 0.50
-		Average Precision: 0.56
-		Average Recall: 0.48
-		Average F1-Score: 0.49
-	KNN:
-		Training Accuracy: 0.51
-		Test Accuracy: 0.50
-		Average Precision: 0.39
-		Average Recall: 0.48
-		Average F1-Score: 0.42
-	Decision Trees:
-		Training Accuracy: 0.32
-		Test Accuracy: 0.45
-		Average Precision: 0.57
-		Average Recall: 0.46
-		Average F1-Score: 0.47
+		Training Accuracy: 0.54
+              precision    recall  f1-score   support
+
+           0       0.40      0.67      0.50         3
+           1       0.00      0.00      0.00         2
+           2       0.33      0.50      0.40         2
+           3       1.00      0.50      0.67         2
+           4       1.00      1.00      1.00         2
+           5       0.00      0.00      0.00         2
+           6       1.00      0.67      0.80         3
+           7       1.00      1.00      1.00         2
+           8       1.00      1.00      1.00         2
+
+    accuracy                           0.60        20
+   macro avg       0.64      0.59      0.60        20
+weighted avg       0.64      0.60      0.60        20
+	
+    KNN:
+		Training Accuracy: 0.46
+              precision    recall  f1-score   support
+
+           0       0.50      0.67      0.57         3
+           1       0.00      0.00      0.00         2
+           2       0.50      0.50      0.50         2
+           3       1.00      0.50      0.67         2
+           4       0.67      1.00      0.80         2
+           5       0.50      0.50      0.50         2
+           6       0.75      1.00      0.86         3
+           7       1.00      0.50      0.67         2
+           8       1.00      1.00      1.00         2
+
+    accuracy                           0.65        20
+   macro avg       0.66      0.63      0.62        20
+weighted avg       0.65      0.65      0.63        20
+	
+    Decision Trees:
+		Training Accuracy: 0.31
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00         3
+           1       0.33      0.50      0.40         2
+           2       0.50      1.00      0.67         2
+           3       0.00      0.00      0.00         2
+           4       1.00      0.50      0.67         2
+           5       0.00      0.00      0.00         2
+           6       0.25      0.33      0.29         3
+           7       1.00      0.50      0.67         2
+           8       0.50      0.50      0.50         2
+
+    accuracy                           0.35        20
+   macro avg       0.40      0.37      0.35        20
+weighted avg       0.37      0.35      0.33        20
+
 	Gradient Boosting:
-		Training Accuracy: 0.32
-		Test Accuracy: 0.40
-		Average Precision: 0.39
-		Average Recall: 0.39
-		Average F1-Score: 0.36
+		Training Accuracy: 0.52
+              precision    recall  f1-score   support
+
+           0       0.33      0.33      0.33         3
+           1       0.00      0.00      0.00         2
+           2       0.33      0.50      0.40         2
+           3       0.00      0.00      0.00         2
+           4       0.67      1.00      0.80         2
+           5       0.00      0.00      0.00         2
+           6       0.75      1.00      0.86         3
+           7       1.00      0.50      0.67         2
+           8       0.50      1.00      0.67         2
+
+    accuracy                           0.50        20
+   macro avg       0.40      0.48      0.41        20
+weighted avg       0.41      0.50      0.43        20
 
 Validação do Experimento:
 	Logistic Regression x SVM
-	t statistic: 0.000
-	p value: 1.000
+    t statistic: 1.220
+    p value: 0.277
 
-	Logistic Regression x KNN
-	t statistic: 1.577
-	p value: 0.176
+    Logistic Regression x KNN
+    t statistic: 1.629
+    p value: 0.164
 
-	Logistic Regression x Decision Trees
-	t statistic: 2.593
-	p value: 0.049
+    Logistic Regression x Decision Trees
+    t statistic: 4.727
+    p value: 0.005
 
-	Logistic Regression x Gradient Boosting
-	t statistic: 1.902
-	p value: 0.116
+    Logistic Regression x Gradient Boosting
+    t statistic: 3.176
+    p value: 0.025
 
-	SVM x KNN
-	t statistic: 1.983
-	p value: 0.104
+    SVM x KNN
+    t statistic: 0.656
+    p value: 0.541
 
-	SVM x Decision Trees
-	t statistic: 1.178
-	p value: 0.292
+    SVM x Decision Trees
+    t statistic: 5.120
+    p value: 0.004
 
-	SVM x Gradient Boosting
-	t statistic: 2.417
-	p value: 0.060
+    SVM x Gradient Boosting
+    t statistic: 1.595
+    p value: 0.172
 
-	KNN x Decision Trees
-	t statistic: 1.036
-	p value: 0.348
+    KNN x Decision Trees
+    t statistic: 3.171
+    p value: 0.025
 
-	KNN x Gradient Boosting
-	t statistic: 1.142
-	p value: 0.305
-	
-	Decision Trees x Gradient Boosting
-	t statistic: -1.658
-	p value: 0.158
+    KNN x Gradient Boosting
+    t statistic: 0.350
+    p value: 0.740
+
+    Decision Trees x Gradient Boosting
+    t statistic: -3.674
+    p value: 0.014
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -335,123 +572,240 @@ Todo o Conjunto de Dados
 
 TF-IDF
 Hiperparâmetros:
-	LogisticRegression: {'C': 10, 'fit_intercept': True, 'penalty': 'l2', 'solver': 'saga'}
-	SVC: {'C': 10, 'kernel': 'linear', 'probability': True, 'shrinking': True}
-	KNeighborsClassifier: {'algorithm': 'auto', 'n_neighbors': 11, 'p': 1, 'weights': 'distance'}
-	DecisionTreeClassifier: {'criterion': 'gini', 'max_features': 'sqrt', 'splitter': 'best'}
-	GradientBoostingClassifier: {'criterion': 'mse', 'learning_rate': 0.1, 'max_depth': 3, 'max_features': 'sqrt', 'min_samples_split': 5, 'n_estimators': 25}
+	LogisticRegression: {'C': 10, 'fit_intercept': False, 'penalty': 'l2', 'solver': 'newton-cg'}
+	SVC: {'C': 10, 'kernel': 'linear', 'shrinking': True}
+	KNeighborsClassifier: {'algorithm': 'auto', 'leaf_size': 15, 'n_neighbors': 13, 'weights': 'distance'}
+	DecisionTreeClassifier:{'criterion': 'entropy', 'max_features': 'auto', 'min_samples_split': 2, 'splitter': 'random'}
+	GradientBoostingClassifier: {'criterion': 'friedman_mse', 'learning_rate': 0.05, 'max_depth': 2, 'max_features': 'sqrt', 'min_samples_split': 2, 'n_estimators': 200}
 Resultados:
 	LogisticRegression:
-		Training Accuracy: 0.73
-		Test Accuracy: 0.70
-		Average Precision: 0.72
-		Average Recall: 0.70
-		Average F1-Score: 0.68
+		Training Accuracy: 0.71
+              precision    recall  f1-score   support
+
+           0       0.62      0.83      0.71         6
+           1       1.00      0.40      0.57         5
+           2       0.67      0.80      0.73         5
+           3       0.50      1.00      0.67         4
+           4       0.80      0.80      0.80         5
+           5       0.33      0.20      0.25         5
+           6       0.80      0.80      0.80         5
+           7       1.00      0.83      0.91         6
+           8       1.00      0.83      0.91         6
+
+    accuracy                           0.72        47
+   macro avg       0.75      0.72      0.71        47
+weighted avg       0.76      0.72      0.71        47
+
 	SVM:
 		Training Accuracy: 0.73
-		Test Accuracy: 0.72
-		Average Precision: 0.75
-		Average Recall: 0.72
-		Average F1-Score: 0.72
+              precision    recall  f1-score   support
+
+           0       0.71      0.83      0.77         6
+           1       1.00      0.40      0.57         5
+           2       0.75      0.60      0.67         5
+           3       0.60      0.75      0.67         4
+           4       0.80      0.80      0.80         5
+           5       0.43      0.60      0.50         5
+           6       0.67      0.80      0.73         5
+           7       0.83      0.83      0.83         6
+           8       1.00      0.83      0.91         6
+
+    accuracy                           0.72        47
+   macro avg       0.75      0.72      0.72        47
+weighted avg       0.76      0.72      0.72        47
+
 	KNN:
 		Training Accuracy: 0.61
-		Test Accuracy: 0.66
-		Average Precision: 0.60
-		Average Recall: 0.64
-		Average F1-Score: 0.61
+              precision    recall  f1-score   support
+
+           0       0.57      0.67      0.62         6
+           1       0.67      0.40      0.50         5
+           2       0.43      0.60      0.50         5
+           3       0.33      0.25      0.29         4
+           4       0.50      0.40      0.44         5
+           5       0.25      0.20      0.22         5
+           6       0.57      0.80      0.67         5
+           7       0.80      0.67      0.73         6
+           8       0.86      1.00      0.92         6
+
+    accuracy                           0.57        47
+   macro avg       0.55      0.55      0.54        47
+weighted avg       0.57      0.57      0.56        47
+
 	Decision Trees:
-		Training Accuracy: 0.54
-		Test Accuracy: 0.47
-		Average Precision: 0.47
-		Average Recall: 0.44
-		Average F1-Score: 0.44
+		Training Accuracy: 0.49
+              precision    recall  f1-score   support
+
+           0       0.43      0.50      0.46         6
+           1       0.11      0.20      0.14         5
+           2       1.00      0.20      0.33         5
+           3       0.29      0.50      0.36         4
+           4       0.25      0.20      0.22         5
+           5       0.33      0.60      0.43         5
+           6       0.40      0.40      0.40         5
+           7       0.50      0.17      0.25         6
+           8       0.67      0.33      0.44         6
+
+    accuracy                           0.34        47
+   macro avg       0.44      0.34      0.34        47
+weighted avg       0.45      0.34      0.34        47
+
 	Gradient Boosting:
-		Training Accuracy: 0.57
-		Test Accuracy: 0.47
-		Average Precision: 0.58
-		Average Recall: 0.45
-		Average F1-Score: 0.44
+		Training Accuracy: 0.68
+              precision    recall  f1-score   support
+
+           0       1.00      0.83      0.91         6
+           1       1.00      0.80      0.89         5
+           2       0.67      0.40      0.50         5
+           3       0.25      0.50      0.33         4
+           4       0.60      0.60      0.60         5
+           5       0.50      0.20      0.29         5
+           6       0.29      0.40      0.33         5
+           7       0.56      0.83      0.67         6
+           8       1.00      0.67      0.80         6
+
+    accuracy                           0.60        47
+   macro avg       0.65      0.58      0.59        47
+weighted avg       0.67      0.60      0.61        47
 
 Validação do experimento:
 	Logistic Regression x SVM
-	t statistic: 0.596
-	p value: 0.577
+	t statistic: 0.825
+	p value: 0.447
 
 	Logistic Regression x KNN
-	t statistic: 2.487
-	p value: 0.055
+	t statistic: 1.535
+	p value: 0.185
 
 	Logistic Regression x Decision Trees
-	t statistic: 2.387
-	p value: 0.063
+	t statistic: 3.294
+	p value: 0.022
 
 	Logistic Regression x Gradient Boosting
-	t statistic: 2.705
-	p value: 0.043
+	t statistic: 3.078
+	p value: 0.028
 
 	SVM x KNN
-	t statistic: 2.380
-	p value: 0.063
+	t statistic: 0.609
+	p value: 0.569
 
 	SVM x Decision Trees
-	t statistic: 2.654
-	p value: 0.045
+	t statistic: 2.953
+	p value: 0.032
 
 	SVM x Gradient Boosting
-	t statistic: 2.572
-	p value: 0.050
+	t statistic: 2.025
+	p value: 0.099
 
 	KNN x Decision Trees
-	t statistic: 0.989
-	p value: 0.368
+	t statistic: 4.055
+	p value: 0.010
 
 	KNN x Gradient Boosting
-	t statistic: 0.577
-	p value: 0.589
+	t statistic: 1.071
+	p value: 0.333
 
 	Decision Trees x Gradient Boosting
-	t statistic: -2.050
-	p value: 0.096
+	t statistic: -2.651
+	p value: 0.045
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Word2Vec
+
 Hiperparâmetros:
 	LogisticRegression: {'C': 10, 'fit_intercept': True, 'penalty': 'l2', 'solver': 'liblinear'}
-	SVC: {'C': 10, 'kernel': 'linear', 'probability': True, 'shrinking': True}
-	KNeighborsClassifier: {'algorithm': 'auto', 'n_neighbors': 9, 'p': 2, 'weights': 'distance'}
-	DecisionTreeClassifier: {'criterion': 'gini', 'max_features': 'auto', 'splitter': 'random'}
-	GradientBoostingClassifier: {'criterion': 'friedman_mse', 'learning_rate': 0.1, 'max_depth': 3, 'max_features': 'sqrt', 'min_samples_split': 5, 'n_estimators': 25}
+	SVC: {'C': 10, 'kernel': 'linear', 'shrinking': True}
+	KNeighborsClassifier: {'algorithm': 'auto', 'leaf_size': 15, 'n_neighbors': 9, 'weights': 'distance'}
+	DecisionTreeClassifier: {'criterion': 'gini', 'max_features': 'log2', 'min_samples_split': 2, 'splitter': 'random'}
+	GradientBoostingClassifier: {'criterion': 'mse', 'learning_rate': 0.25, 'max_depth': 7, 'max_features': 'sqrt', 'min_samples_split': 2, 'n_estimators': 200}
+
 Resultados:
 	LogisticRegression:
 		Training Accuracy: 0.62
-		Test Accuracy: 0.66
-		Average Precision: 0.67
-		Average Recall: 0.65
-		Average F1-Score: 0.64
+	              precision    recall  f1-score   support
+	
+	           0       1.00      0.83      0.91         6
+	           1       0.57      0.80      0.67         5
+	           2       0.75      0.60      0.67         5
+	           3       0.60      0.75      0.67         4
+	           4       0.50      0.20      0.29         5
+	           5       0.40      0.40      0.40         5
+	           6       0.67      0.80      0.73         5
+	           7       0.50      0.67      0.57         6
+	           8       1.00      0.83      0.91         6
+	
+	    accuracy                           0.66        47
+	   macro avg       0.67      0.65      0.64        47
+	weighted avg       0.68      0.66      0.65        47
 	SVM:
 		Training Accuracy: 0.59
-		Test Accuracy: 0.57
-		Average Precision: 0.65
-		Average Recall: 0.59
-		Average F1-Score: 0.58
+	              precision    recall  f1-score   support
+	
+	           0       0.80      0.67      0.73         6
+	           1       0.44      0.80      0.57         5
+	           2       1.00      0.40      0.57         5
+	           3       0.50      1.00      0.67         4
+	           4       0.50      0.60      0.55         5
+	           5       0.29      0.40      0.33         5
+	           6       1.00      0.60      0.75         5
+	           7       0.33      0.17      0.22         6
+	           8       1.00      0.67      0.80         6
+	
+	    accuracy                           0.57        47
+	   macro avg       0.65      0.59      0.58        47
+	weighted avg       0.66      0.57      0.57        47
 	KNN:
 		Training Accuracy: 0.42
-		Test Accuracy: 0.30
-		Average Precision: 0.36
-		Average Recall: 0.29
-		Average F1-Score: 0.28
+	              precision    recall  f1-score   support
+	
+	           0       0.40      0.67      0.50         6
+	           1       0.00      0.00      0.00         5
+	           2       0.40      0.40      0.40         5
+	           3       0.14      0.25      0.18         4
+	           4       0.33      0.20      0.25         5
+	           5       0.20      0.20      0.20         5
+	           6       0.43      0.60      0.50         5
+	           7       0.33      0.17      0.22         6
+	           8       1.00      0.17      0.29         6
+	
+	    accuracy                           0.30        47
+	   macro avg       0.36      0.29      0.28        47
+	weighted avg       0.38      0.30      0.29        47
 	Decision Trees:
-		Training Accuracy: 0.25
-		Test Accuracy: 0.32
-		Average Precision: 0.31
-		Average Recall: 0.32
-		Average F1-Score: 0.31
+		Training Accuracy: 0.31
+	              precision    recall  f1-score   support
+	
+	           0       0.00      0.00      0.00         6
+	           1       0.00      0.00      0.00         5
+	           2       0.25      0.20      0.22         5
+	           3       0.40      0.50      0.44         4
+	           4       0.00      0.00      0.00         5
+	           5       0.25      0.40      0.31         5
+	           6       0.67      0.40      0.50         5
+	           7       0.50      0.50      0.50         6
+	           8       0.33      0.17      0.22         6
+	
+	    accuracy                           0.23        47
+	   macro avg       0.27      0.24      0.24        47
+	weighted avg       0.26      0.23      0.24        47
+	
 	Gradient Boosting:
-		Training Accuracy: 0.41
-		Test Accuracy: 0.47
-		Average Precision: 0.46
-		Average Recall: 0.47
-		Average F1-Score: 0.44
+		Training Accuracy: 0.52
+	              precision    recall  f1-score   support
+	
+	           0       0.55      1.00      0.71         6
+	           1       0.50      0.20      0.29         5
+	           2       0.00      0.00      0.00         5
+	           3       0.25      0.50      0.33         4
+	           4       0.50      0.60      0.55         5
+	           5       0.20      0.20      0.20         5
+	           6       0.33      0.40      0.36         5
+	           7       0.60      0.50      0.55         6
+	           8       0.67      0.33      0.44         6
+	
+	    accuracy                           0.43        47
+	   macro avg       0.40      0.41      0.38        47
+	weighted avg       0.42      0.43      0.39        47
 
 Validação do experimento:
 	Logistic Regression x SVM
@@ -463,33 +817,33 @@ Validação do experimento:
 	p value: 0.070
 
 	Logistic Regression x Decision Trees
-	t statistic: 6.007
-	p value: 0.002
+	t statistic: 6.689
+	p value: 0.001
 
 	Logistic Regression x Gradient Boosting
-	t statistic: 2.949
-	p value: 0.032
+	t statistic: 3.025
+	p value: 0.029
 
 	SVM x KNN
 	t statistic: 1.898
 	p value: 0.116
 
 	SVM x Decision Trees
-	t statistic: 3.142
-	p value: 0.026
+	t statistic: 3.630
+	p value: 0.015
 
 	SVM x Gradient Boosting
-	t statistic: 2.871
-	p value: 0.035
+	t statistic: 2.241
+	p value: 0.075
 
 	KNN x Decision Trees
-	t statistic: 2.626
-	p value: 0.047
+	t statistic: 2.553
+	p value: 0.051
 
 	KNN x Gradient Boosting
-	t statistic: -0.439
-	p value: 0.679
-
+	t statistic: -0.338
+	p value: 0.749
+	
 	Decision Trees x Gradient Boosting
-	t statistic: -3.623
-	p value: 0.015
+	t statistic: -3.449
+	p value: 0.018
